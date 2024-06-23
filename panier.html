@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Panier Chloliza</title>
+     <script src="https://kit.fontawesome.com/2a9a138293.js" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="panierstyle.css">
+ </head>
+
+ <body>
+    <header>
+       <div id="photo-couverture">
+          <img src="images/banniere_janvier.jpg" width="100%" alt="photo-couverture">
+       </div>
+       <nav>
+          <img id="menu-btn" onclick="toggleMenu()" src="images/menu-btn.png" width="35px" alt="icone-menu"/>
+          <a href="#"><img id="logo" src="images/My_Logo_blanc.png" width="250px" alt="monLogo"></a>   
+          <div>
+              <ul id="menu">
+                  <li><a href="index.html">Accueil</a></li> 
+                  <li><a href="#">Articles</a></li> 
+                  <li><a href="#">Panier</a></li> 
+                  <li><a href="#">Mon compte</a></li> 
+                  <li><a href="#">Notre Equipe</a></li>
+              </ul>
+          </div>   
+       </nav>
+    </header>
+    
+    <h1>Votre panier</h1>
+
+    <div class="container">
+    <div class="tous-les-produits">
+       <div class="chaqueproduit">
+          <img class="image-produits" src="images/veste2.jpg">
+          <div class="description">
+             <h3>Veste Dioriviera</h3>
+             <p class="prix">$1600.00</p>
+             <div class="quantites">
+                <i class="fa-solid fa-trash fa-xl"></i>
+                <p class="affichageQte">3</p>
+                <i class="fa-solid fa-square-plus fa-xl iconePlus"></i>
+                <i class="fa-solid fa-square-minus fa-xl iconeMoins"></i>
+              </div>
+           </div>
+       </div>
+
+        <div class="chaqueproduit">
+          <img class="image-produits" src="images/pantalon2.jpg">
+          <div class="description">
+             <h3>Pantalon évasé</h3>
+             <p class="prix">$1900.00</p>
+             <div class="quantites">
+                <i class="fa-solid fa-trash fa-xl"></i>
+                <p class="affichageQte">1</p>
+                <i class="fa-solid fa-square-plus fa-xl iconePlus"></i>
+                <i class="fa-solid fa-square-minus fa-xl iconeMoins"></i>
+             </div>
+          </div>
+        </div>
+
+       <div class="chaqueproduit">
+          <img class="image-produits" src="images/robe2.jpg">
+          <div class="description">
+             <h3>Robe mi-longue évasé</h3>
+             <p class="prix">$3200.00</p>
+             <div class="quantites">
+                <i class="fa-solid fa-trash fa-xl"></i>
+                <p class="affichageQte">2</p>
+                <i class="fa-solid fa-square-plus fa-xl iconePlus"></i>
+                <i class="fa-solid fa-square-minus fa-xl iconeMoins"></i>
+             </div>
+          </div>
+       </div>
+    </div>
+     
+   
+
+    <div class="cart">
+       <h2>Sous-total :</h2>
+       <h2 id="affichageTot">$ 0.00</h2>
+    </div>
+   
+    <button id="calculer">Calculer le total</button>
+    <button>Passer commande</button>
+   </div>
+
+   <footer>
+      <img src="My_Logo_rose.png" width="200px" alt="logo">
+      <div id="icones">
+          <a href="#"><i class="fa-solid fa-house"></i></a>
+          <a href="#"><i class="fa-solid fa-heart"></i></a>
+          <a href="#"><i class="fa-solid fa-user"></i></a>
+          <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+      </div>
+  </footer>
+   
+   <script src="panier.js"></script>
+  </body>
+</html>

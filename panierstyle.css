@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/*MENU*/
+
+header #photo-couverture img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+ }
+
+
+nav #menu-btn{
+    position: absolute;
+    z-index: 1;
+    top: 30px;
+    left: 40px;
+
+}
+
+nav ul{
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 420px;
+    padding: 70px 0 0 40px;
+    flex-direction: column;
+    align-items: center;
+    list-style: none; 
+    background-color: #191919;
+    height: 120vh;
+ }
+
+
+nav a{
+    text-decoration: none;
+    font-size: 25px;
+    color: #E0B79E;
+}
+
+nav li{
+    margin-top: 20px;
+}
+
+
+nav #logo{
+    height: 50px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    width: 200px;
+    margin: 0 auto;
+}
+
+/*BODY*/
+
+body {
+    background-color:#19191910;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #191919;
+}
+
+.container {
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.tous-les-produits {
+    display: flex;
+    flex-direction: column;
+    background-color:white;
+}
+
+h3, p {color: #191919;}
+
+.image-produits {
+    height: 300px;
+}
+
+.chaqueproduit {
+    display: flex;
+    justify-content: left;
+    padding: 50px 50px;
+
+}
+
+.chaqueproduit:hover {
+    background-color: #E0B79E;
+}
+
+.chaqueproduit:hover p, .chaqueproduit:hover h3 {
+color:#191919;
+}
+
+.chaqueproduit:hover i {
+    color:#191919;
+}
+
+.quantites {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.description {
+    margin-top: 30px;
+    margin-left: 50px;
+    line-height: 30px;
+}
+
+.cart {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 50px;
+   
+}
+
+button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    width: 80%;
+    height: 40px;
+    padding: 5px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    color: #E0B79E;
+    background-color: #191919 ;
+}
+
+button:hover {
+    background-color: #E0B79E;
+    color: #191919;
+    border:1px solid #191919;
+}
+
+i {
+    cursor: pointer;
+    color: #191919;
+}
+
+/*FOOTER*/
+
+footer{
+    background-color: #191919;
+    height: 15vh;
+}
+footer img{
+    display: inline-block;
+    margin-top: 15px;
+}
+
+footer #icones{
+    display: inline-block;
+    float: inline-end;
+    margin-top: 28px;
+    padding: 2px;
+}
+
+footer i{
+    color: #E0B79E;
+    width: 50px; 
+}
+
+/*RESPONSIVE Smartphones*/
+
+@media (max-width: 480px){
+
+    .image-banniere {
+        height: auto;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .container {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .chaqueproduit {
+        display: block;
+    
+    }
+
+    .image-produits {
+        width: 100%;
+        height: auto;
+    }
+
+    .description {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .quantites {display: block;
+    margin-left: auto;
+    margin-right:auto ;}
+
+    .iconePlus {
+        margin-right: 10px;
+
+    }
+
+    .cart {
+        display: block;
+        text-align: center;
+       line-height: 35px;
+    }
+
+    button {
+        width: 200px;
+        margin-bottom: 30px;
+    }
+
+
+
+}

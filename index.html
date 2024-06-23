@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Accueil - Chloliza</title>
+        <link rel="stylesheet" href="styles.css" >
+        <!-- FAVICON -->
+        <link rel="icon" type="image/x-icon" href="#">
+        <script src="https://kit.fontawesome.com/762c6eb428.js" crossorigin="anonymous"></script> 
+
+        <!-- FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <header>
+            <div id="photo-couverture">
+                <img src="images/banniere_janvier.jpg" width="100%" alt="photo-couverture">
+            </div>
+            <nav>
+                <img id="menu-btn" onclick="toggleMenu()" src="images/menu-btn.png" width="35px" alt="icone-menu"/>
+                <a href="#"><img id="logo" src="images/My_Logo_blanc.png" width="250px" alt="monLogo"></a>   
+                <div>
+                    <ul id="menu">
+                        <li><a href="#">Accueil</a></li> 
+                        <li><a href="#">Articles</a></li> 
+                        <li><a href="panier.html">Panier</a></li> 
+                        <li><a href="#">Mon compte</a></li> 
+                        <li><a href="#">Notre Equipe</a></li>
+                    </ul>
+                </div>   
+            </nav>
+        </header>
+
+        <div id="home-page">
+
+            <div id="logo-home">
+                <img src="images/My_Logo_noir.png" width="30%" alt="logo">
+            </div>
+            
+            <div id="main-product">
+                <img src="images/veste3.jpg" width="400px" alt="veste">
+                <div id="descriptif">
+                    <h3>Veste dioriviera</h3>
+                    <p>$1600,00</p>
+                    <p id="description">Lorem ipsum dolor sit amet, consectetur elit. Reprehendit provident nam officiis ex harum, dolor sit dicta mius fugit, debitis.</p>
+                </div>       
+            </div>
+
+            <div class="deals">
+                <h3>Deals</h3>
+                <h3>See all</h3>
+            </div>
+
+            <div class="tous-les-produits">
+
+                <div class="chaqueproduit">
+                    <img src="images/veste.jpg" width="250px" alt="veste">
+                    <h3>Veste dioriviera</h3>
+                    <p class="prix">$1600,00</p>           
+                    <div>
+                        <button class="btn-ajout" onclick="ajouterAuPanier('Veste dioriviera')">Ajouter au panier</button>
+                    </div>                        
+                </div>
+
+                <div class="chaqueproduit">
+                    <img src="images/pantalon.jpg" width="250px" alt="pantalon">
+                    <h3 >Pantalon évasé</h3>
+                    <p class="prix">$1900,00</p>
+                    <div>
+                        <button class="btn-ajout pantalon" onclick="ajouterAuPanier('Pantalon évasé')">Ajouter au panier</button>
+                    </div>                      
+                </div>
+
+                <div class="chaqueproduit">
+                    <img src="images/chaussure.jpg" width="250px" alt="sandales">
+                    <h3>Sandales plateforme</h3>
+                    <p class="prix">$1090,00</p>
+                    <div>
+                        <button class="btn-ajout sandales" onclick="ajouterAuPanier('Sandales plateforme')">Ajouter au panier</button>
+                    </div>
+                </div>       
+
+                <div class="chaqueproduit">
+                    <img src="images/robe.jpg" width="250px" alt="robe">
+                    <h3>Robe mi-longue évasé</h3>
+                    <p class="prix">$3200,00</p>                       
+                    <div>
+                        <button class="btn-ajout robe" onclick="ajouterAuPanier('Robe mi-longue évasé')">Ajouter au panier</button>
+                    </div>                 
+                </div>
+
+            </div>
+
+
+            <div id="cart-total">
+                <h2>Panier :</h2>           
+                <div>
+                    <div id="messages"></div>
+                </div>
+            </div>
+
+        <footer>
+
+            <img src="images/My_Logo_rose.png" width="200px" alt="logo">
+            <div id="icones">
+                <a href="#"><i class="fa-solid fa-house"></i></a>
+                <a href="#"><i class="fa-solid fa-heart"></i></a>
+                <a href="#"><i class="fa-solid fa-user"></i></a>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+
+        </footer>
+        
+    </body>
+
+    <script>
+
+        /* MENU NAVBAR */
+
+        function toggleMenu(){
+            let menu = document.getElementById("menu");
+            if(menu.style.display == "block")
+           { menu.style.display = "none";
+        }
+    
+
+        else{
+            menu.style.display = "block";
+        }
+    }
+
+
+
+    let panier = {};
+
+        function ajouterAuPanier(produit) {
+            if (panier[produit]) {
+                panier[produit]++;
+            } else {
+                panier[produit] = 1;
+            }
+
+            let messages = document.getElementById('messages');
+
+            messages.innerHTML = '';
+
+            for (let produit in panier) {
+                let phrase = document.createElement('p');
+                phrase.textContent = panier[produit] + 'X ' + produit + ' a été ajouté au panier';
+                messages.appendChild(phrase);
+            }
+        }
+
+    </script>
+
+
+</html>
